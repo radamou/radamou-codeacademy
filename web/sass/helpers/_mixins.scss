@@ -1,0 +1,13 @@
+//mixin with no arguments
+@mixin no-variable {
+  font-size: 12px;
+  color: #FFF;
+  opacity: .9;
+}
+
+
+//mixin with argumenst
+@mixin dimensions($width, $height){
+  width: $width;
+  height: $height;
+}

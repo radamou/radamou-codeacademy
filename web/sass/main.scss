@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico); // import google font
+@import "helpers/functions"; // to import other sass files
+@import "helpers/mixins";
+@import "helpers/variables"; 
+@import "helpers/placeholders";
+
+.block{
+	with: $half;
+}
+//this class extend the absolute class properties
+.slogan {
+	@extend %absolutei;
+	@extend .block;
+	color : white;
+}
+
+// nesting behaviour
+.container {
+  font-family: 'Pacifico', cursive;
+
+  .icon { //these properties are applied for all icon class in containair class
+    display: inline-block;
+    margin: 2%;
+    border: $border;
+
+    @include dimensions(300px, 300px);
+  }
+}
+
+//inclusion of placeholders
+span {
+  @extend %placeholder;
+}
+
+div {
+  @extend %placeholder; //
+}
+
+
+//inclusion of mixins
+p {
+  @include no-variable;
+}
+
+h1 {
+  @include no-variable;
+}
